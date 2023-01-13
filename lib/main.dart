@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:test_app/hello.dart';
+import 'package:get/get.dart';
+
+import 'app/modules/User/views/user_view.dart';
+import 'app/routes/app_pages.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,12 +13,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Get X',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(),
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      enableLog: true,
+      initialRoute: Routes.USER,
+      defaultTransition: Transition.fade,
+      getPages: AppPages.routes,
     );
   }
 }
