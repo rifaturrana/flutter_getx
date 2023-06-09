@@ -1,16 +1,61 @@
-# test_app
+# Flutter with GetX
+This is a Flutter application that fetches user data from the JSONPlaceholder API and displays their posts. The app utilizes the GetX package for state management.
 
-A new Flutter project.
+## Demo
+<video src='app.mp4' width=180/> </video>
 
-## Getting Started
+## Installation
+Clone the repository:
 
-This project is a starting point for a Flutter application.
+```bash
+git clone https://github.com/rifaturrana/flutter_getx.git
+```
 
-A few resources to get you started if this is your first Flutter project:
+## Install the dependencies:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```bash
+flutter pub get
+```
+## Run the app:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+flutter run
+```
+
+## Configuration
+To make API calls, the app is already configured to use the JSONPlaceholder API. No additional configuration is required.
+
+## Usage
+The app demonstrates a simple flow where user data is fetched from the JSONPlaceholder API, and for each user, their posts are fetched and displayed.
+
+On app launch, the user data is fetched from the JSONPlaceholder API and displayed on the home screen.
+
+Tap on a user to view their posts. The app will make another API call to fetch the posts for that user.
+
+The posts are displayed on the screen, and you can navigate back to the home screen to select another user.
+
+## State Management with GetX
+
+GetX is a powerful state management solution for Flutter that simplifies reactive programming and makes it easy to handle state changes. In this app, GetX is used to manage the app's state and update the UI when necessary.
+
+The core concepts used in GetX are:
+
+Controllers: Controllers are responsible for managing the state and business logic of specific parts of the app. In this app, we have a UserController and a PostController to manage the user and post data, respectively.
+
+GetXBuilder: The GetXBuilder widget is used to observe changes in the controller's state and update the UI accordingly. It allows you to listen to specific variables or the entire controller, triggering a rebuild whenever the observed values change.
+
+Dependency Injection: GetX provides a built-in dependency injection system that makes it easy to inject dependencies into controllers. In this app, the controllers are injected into the respective screens using GetX's Get.put() method.
+
+## API Integration
+The app integrates with the JSONPlaceholder API to fetch user data and their posts. The API endpoints used are:
+
+Users API: https://jsonplaceholder.typicode.com/users
+
+This endpoint provides a list of users and their details.
+
+Posts API: https://jsonplaceholder.typicode.com/posts?userId={userId}
+
+This endpoint provides a list of posts for a specific user. Replace {userId} with the ID of the selected user.
+
+## Conclusion
+This Flutter app demonstrates how to fetch user data from the JSONPlaceholder API and display their posts using the GetX package for state management. It
