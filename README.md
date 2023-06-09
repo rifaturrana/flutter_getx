@@ -2,7 +2,13 @@
 This is a Flutter application that fetches user data from the JSONPlaceholder API and displays their posts. The app utilizes the GetX package for state management.
 
 ## Demo
-<video src='app.mp4' width=180/> </video>
+
+
+  
+https://github.com/rifaturrana/flutter_getx/assets/82287698/696ae9d2-033b-4ff4-aa09-61f64f627cd4
+  
+
+
 
 ## Installation
 Clone the repository:
