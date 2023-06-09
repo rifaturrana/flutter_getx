@@ -4,6 +4,7 @@ import 'package:test_app/app/models/user.dart';
 
 class UserController extends GetxController {
   List<User> users = <User>[].obs;
+  // RxList<User> usersNames = <User>[].obs;
 
   @override
   void onInit() {
